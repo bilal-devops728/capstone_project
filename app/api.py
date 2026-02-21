@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from router import metrics
+from router.metrics import router
 app = FastAPI(
     title="My FastAPI Application",
     description="This is a sample FastAPI application.",
@@ -13,4 +13,5 @@ def say():
     this is api for testing purpose
     """
     return {"message": "welcome to api learning Aliya"}
-app.include_router(metrics.router)
+
+app.include_router(router)

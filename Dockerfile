@@ -1,0 +1,12 @@
+FROM python:3.14
+
+WORKDIR /project
+
+COPY . /project
+
+RUN pip install -r requirement.txt
+
+EXPOSE 8000
+
+CMD ["uvicorn","app.api:app", "--host", "0.0.0.0", "--port", "8000"]
+
