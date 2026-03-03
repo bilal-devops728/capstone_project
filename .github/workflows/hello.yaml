@@ -1,17 +1,17 @@
-  name: Bilal
-
-on: 
-push:
- branches: [master]  
+---
+name: Hello workflow
+on:
+  push:
+    branches:
+      - main
 jobs:
-
-   greet:
-   runs-on: ubuntu-latest
+  greet:
+    runs-on: ubuntu-latest
     steps:
-     - name: say hello typ users
-      run: "hello dosto"
-
+      - name: say hello to users
+        run: echo 'hello dosto'
       - name: say hello to username
-         run:  echo "hello $USER"
+        run: echo 'hello $USER'
+
      
   
